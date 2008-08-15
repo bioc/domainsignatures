@@ -1,0 +1,8 @@
+## We sholdn't have to do this. Is S4 broken again???
+import(AnnotationDbi)
+
+export("dataSource", "getKEGGdata", "gseDomain", "getKEGGdescription")
+
+exportClasses("ipDataSource")
+
+exportMethods("show")
