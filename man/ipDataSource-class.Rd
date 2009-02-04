@@ -15,7 +15,7 @@ interPro domains}
 
 \section{Creating Objects}{
 Objects can be created using\cr
-\code{  new('ipDataSource,}\cr
+\code{  new('ipDataSource',}\cr
 \code{    genes        = ...., # Object of class character}\cr
 \code{    pathways     = ....  # Object of class character}\cr
 \code{    domains      = ....  # Object of class character}\cr
