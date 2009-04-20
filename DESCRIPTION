@@ -1,7 +1,7 @@
 Package: domainsignatures
 Type: Package
 Title: Geneset enrichment based on InterPro domain signatures
-Version: 1.4.0
+Version: 1.5.0
 Date: 2008-05-29
 Author: Florian Hahne, Tim Beissbarth
 Maintainer: Florian Hahne <f.hahne@dkfz.de>
