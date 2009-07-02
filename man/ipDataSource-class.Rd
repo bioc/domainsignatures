@@ -34,6 +34,7 @@ or the functions \code{\link{dataSource}} or \code{\link{getKEGGdata}}.}
 \item{\code{path2Domains}:}{Hash table mapping pathway IDs to InterPro
   IDs}
 \item{\code{type}:}{Type of pathway. A character skalar}
+\item{\code{dims}:}{Numeric vector of dimensions}
 }}
 
 \section{Methods}{\describe{
