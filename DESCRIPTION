@@ -3,7 +3,7 @@ Type: Package
 Title: Geneset enrichment based on InterPro domain signatures
 Version: 1.7.0
 Author: Florian Hahne, Tim Beissbarth
-Maintainer: Florian Hahne <f.hahne@dkfz.de>
+Maintainer: Florian Hahne <florian.hahne@novartis.com>
 Description: Find significantly enriched gene classifications in a list of functionally undescribed genes based on their InterPro domain structure.
 Depends: R (>= 2.4.0), KEGG.db, prada, biomaRt, methods
 Imports: AnnotationDbi
