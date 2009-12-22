@@ -2,7 +2,8 @@
 ## corresponding InterPro IDs from biomaRt for the universe of
 ## entrezgene IDs
 
-getKEGGdata <- function(universe=NULL, pathways=NULL)
+getKEGGdata <- function(universe=NULL, pathways=NULL,
+                        ensemblMart="hsapiens_gene_ensembl")
 {
     ## check if we are online
     op <- options(warn=-1)
@@ -22,7 +23,7 @@ getKEGGdata <- function(universe=NULL, pathways=NULL)
     hKEGGgenes <-  hKEGGgenes[!is.na(hKEGGgenes)]
 
     ## get corresponding interpro domains from biomaRt
-    ensembl <- useMart("ensembl", dataset = "hsapiens_gene_ensembl")
+    ensembl <- useMart("ensembl", dataset=ensemblMart)
     tmp <- getBM(attributes=c("entrezgene", "interpro"), filters="entrezgene",
                  values=hKEGGgenes, mart = ensembl)
     gene2Domains <- split(tmp$interpro, tmp$entrezgene, drop=FALSE)

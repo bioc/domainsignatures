@@ -13,7 +13,7 @@ compSimilarities <- function(geneList, dataSource, n=10000, verbose=TRUE,
   np <- length(dataSource@pathways)
   dists <- setDists <- list()
   ## setup progress report
-  if(verbose){
+  if(verbose && capabilities("tcltk")){
     require(prada)
     mess <- paste("resampling gene list\nwith ", n ,"samples")
     sub <- paste("(pathway 1 of ", np, ")", sep="")
@@ -32,7 +32,7 @@ compSimilarities <- function(geneList, dataSource, n=10000, verbose=TRUE,
     setDists[[p]] <- sim2Pathway(pathway=p, doms=listDoms,
                                  dataSource=dataSource)
     ## report progress
-    if(verbose)
+    if(verbose && capabilities("tcltk"))
       updateProgress((i)/np*100, autoKill=TRUE,
                      sub= paste("(", i, " of ", np, ")\n",p, sep=""))
   }
