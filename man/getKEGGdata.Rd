@@ -42,6 +42,7 @@ getKEGGdata(universe=NULL, pathways=NULL, ensemblMart="hsapiens_gene_ensembl")
 
 \seealso{\code{\link{gseDomain}}}
 \examples{
+if(interactive())
 getKEGGdata()
 }
 \keyword{IO}

@@ -30,8 +30,11 @@ dataSource(mapping, type = "generic")
 
 \seealso{\code{\link{gseDomain}}, \code{\link{getKEGGdata}}}
 \examples{
+if(interactive())
+{
 grouping <- list("653361"=c("pw1", "pw2"), "729230"="pw1",
                  "415117"="pw3") 
 dataSource(grouping)
+}
 }
 \keyword{IO}
