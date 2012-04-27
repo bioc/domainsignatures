@@ -1,7 +1,7 @@
 Package: domainsignatures
 Type: Package
 Title: Geneset enrichment based on InterPro domain signatures
-Version: 1.17.0
+Version: 1.17.1
 Author: Florian Hahne, Tim Beissbarth
 Maintainer: Florian Hahne <florian.hahne@novartis.com>
 Description: Find significantly enriched gene classifications in a list of functionally undescribed genes based on their InterPro domain structure.
@@ -10,4 +10,4 @@ Imports: AnnotationDbi
 License: Artistic-2.0
 Collate: AllClasses.R methods-ipDataSource.R zzz.R getKEGGdata.R sage.test.R compSimilarities.R sim2Pathway.R getKEGGdescription.R resampleGeneLists.R dataSource.R  gseDomain.R
 LazyLoad: yes
-biocViews:  Bioinformatics, Annotation, Pathways
+biocViews:  Annotation, Pathways, GeneSetEnrichment
