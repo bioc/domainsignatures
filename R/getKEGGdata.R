@@ -25,7 +25,7 @@ getKEGGdata <- function(universe=NULL, pathways=NULL,
     ## get corresponding interpro domains from biomaRt
     ensembl <- useMart("ensembl", dataset=ensemblMart)
     tmp <- getBM(attributes=c("entrezgene", "interpro"), filters="entrezgene",
-                 values=hKEGGgenes, mart = ensembl)
+                 values=hKEGGgenes, mart = ensembl, bmHeader=FALSE)
     gene2Domains <- split(tmp$interpro, tmp$entrezgene, drop=FALSE)
     missing <- setdiff(hKEGGgenes, names(gene2Domains))
     gene2Domains[missing] <- ""

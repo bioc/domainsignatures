@@ -180,7 +180,7 @@ numbers of common protein domains, so we don't really expect the
 method to give very useful results here.
 <<biomart>>=
 ensembl <- useMart("ensembl",dataset="hsapiens_gene_ensembl")
-cMap <- getBM(attributes=c("entrezgene", "chromosome_name"),
+cMap <- getBM(attributes=c("entrezgene", "chromosome_name"), bmHeader=FALSE,
               filters="entrezgene", value=univGenes, mart=ensembl)
 cMap <- cMap[cMap$chromosome_name %in% c(as.character(1:23), "X", "Y"),]
 grouping <- split(cMap$chromosome_name, cMap$entrezgene)

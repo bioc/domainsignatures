@@ -11,7 +11,7 @@ dataSource <- function(mapping, type="generic"){
   ## get corresponding interpro domains from biomaRt
   ensembl <- useMart("ensembl", dataset = "hsapiens_gene_ensembl")
   tmp <- getBM(attributes=c("entrezgene", "interpro"), filters="entrezgene",
-               values=genes, mart = ensembl)
+               values=genes, mart = ensembl, bmHeader=FALSE)
   gene2Domains <- split(tmp$interpro, tmp$entrezgene, drop=FALSE)
   missing <- setdiff(genes, names(gene2Domains))
   gene2Domains[missing] <- ""
